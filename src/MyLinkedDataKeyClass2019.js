@@ -171,7 +171,6 @@ function joseSignerFactory(key) {
       };
 
       let toBeSigned = Buffer.from(data.buffer, data.byteOffset, data.length);
-      toBeSigned = base64url.encode(toBeSigned);
 
       const flattened = jose.JWS.sign.flattened(
         toBeSigned,
@@ -226,11 +225,15 @@ function joseVerifierFactory(key, alg = this.alg, type = this.type) {
 
       let verified = false;
 
-      const toBeSigned = base64url.encode(
-        Buffer.from(data.buffer, data.byteOffset, data.length)
-      );
-
-      const jws = `${encodedHeader}.${toBeSigned}.${encodedSignature}`;
+      const jws = {
+        payload: Buffer.from(
+          data.buffer,
+          data.byteOffset,
+          data.length
+        ).toString(),
+        protected: encodedHeader,
+        signature: encodedSignature
+      };
 
       try {
         jose.JWS.verify(jws, jose.JWK.asKey(key.publicKeyJwk), {
