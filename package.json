@@ -1,0 +1,32 @@
+{
+  "name": "json-ld-sig-detached-jws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transmute-industries/json-ld-sig-detached-jws.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/transmute-industries/json-ld-sig-detached-jws/issues"
+  },
+  "homepage": "https://github.com/transmute-industries/json-ld-sig-detached-jws#readme",
+  "devDependencies": {
+    "did-method-key": "^0.2.0",
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "@panva/jose": "^1.9.3",
+    "base-x": "^3.0.7",
+    "base64url": "^3.0.1",
+    "crypto-ld": "^3.7.0",
+    "jose": "^1.16.0",
+    "jsonld-signatures": "^4.4.0",
+    "node-forge": "^0.9.1"
+  }
+}
