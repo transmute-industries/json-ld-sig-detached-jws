@@ -170,9 +170,8 @@ function joseSignerFactory(key) {
         crit: ["b64"]
       };
 
-      const toBeSigned = base64url.encode(
-        Buffer.from(data.buffer, data.byteOffset, data.length)
-      );
+      let toBeSigned = Buffer.from(data.buffer, data.byteOffset, data.length);
+      toBeSigned = base64url.encode(toBeSigned);
 
       const flattened = jose.JWS.sign.flattened(
         toBeSigned,
