@@ -27,6 +27,8 @@ const privateKeyBase58 = utils.privateKeyPemToPrivateKeyBase58({
 const publicKeyJwk = utils.publicKeyBase58ToPublicKeyJwk(publicKeyBase58);
 const privateKeyJwk = utils.privateKeyBase58ToPrivateKeyJwk(privateKeyBase58);
 
+console.log(JSON.stringify({ publicKeyJwk, privateKeyJwk }, null, 2));
+
 const didKey = new Ed25519KeyPair({ publicKeyBase58, privateKeyBase58 });
 
 didKey.publicKeyJwk = publicKeyJwk;

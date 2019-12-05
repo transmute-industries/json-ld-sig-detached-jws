@@ -10,7 +10,7 @@ const {
   MyLinkedDataSignature2019
 } = require("../index");
 
-describe("Interop", () => {
+describe.skip("Interop", () => {
   it("panva sign / db verify", async () => {
     const signed1 = await jsigs.sign(
       { ...fixtures.doc },

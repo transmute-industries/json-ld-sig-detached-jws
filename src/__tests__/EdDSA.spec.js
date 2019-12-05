@@ -9,7 +9,8 @@ const header = {
   crit: ["b64"]
 };
 
-const toBeSigned = Buffer.from("1223123123123123123", "hex");
+const toBeSigned = Buffer.from("4a4b4c", "hex");
+// const toBeSigned = "test";
 
 describe("EdDSA", () => {
   it("sign and verify", async () => {
@@ -18,6 +19,7 @@ describe("EdDSA", () => {
       jose.JWK.asKey(fixtures.didKey.privateKeyJwk),
       header
     );
+    // console.log(`${flat.protected}.${flat.payload}.${flat.signature}`);
     const verified = await jose.JWS.verify(
       {
         ...flat,
