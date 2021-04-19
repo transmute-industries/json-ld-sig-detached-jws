@@ -25,7 +25,7 @@
     "base-x": "^3.0.7",
     "base64url": "^3.0.1",
     "crypto-ld": "^3.7.0",
-    "jose": "^1.16.0",
+    "jose": "^1.28.1",
     "jsonld-signatures": "^4.4.0",
     "node-forge": "^0.9.1"
   }
