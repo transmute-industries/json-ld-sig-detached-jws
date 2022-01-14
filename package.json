@@ -27,6 +27,6 @@
     "crypto-ld": "^3.7.0",
     "jose": "^1.16.0",
     "jsonld-signatures": "^4.4.0",
-    "node-forge": "^0.9.1"
+    "node-forge": "^1.0.0"
   }
 }
